@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FireStone Pizza | Wood-Fired Neapolitan Pizzeria &amp; Cucina Italiana</title>
+<meta name="description" content="FireStone Pizza — an authentic Neapolitan pizzeria crafting wood-fired pizza, handmade pasta and Italian classics since 1987. Reserve your table today.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23C1502D' d='M12 22c4.4 0 7-2.7 7-6.8 0-2.4-1.2-4.6-3-6.3.3 1.8-.4 3.2-1.7 3.8.4-2.6-.7-5.6-3.5-8.3-.4 2.8-1.9 4.8-3.5 6.6C5.9 12.6 5 14.7 5 16.6 5 19.8 7.6 22 12 22z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&amp;family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Preloader -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader__mark">
+    <svg class="icon icon--flame" aria-hidden="true"><use href="#icon-flame"></use></svg>
+  </div>
+</div>
+
+<!-- Scroll progress -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- Icon sprite -->
+<svg style="display:none" aria-hidden="true">
+  <symbol id="icon-flame" viewBox="0 0 24 24" fill="currentColor"><path d="M12.5 1.5c-.6 3.1-2.6 4.7-4.4 6.8C6.4 10.1 5 12.4 5 15c0 4.6 3.4 7.5 7 7.5s7-2.9 7-7.2c0-2.6-1.2-4.8-3-6.6.3 1.8-.3 3.1-1.6 3.8.6-3.4-.4-7.4-1.9-11z"/></symbol>
+  <symbol id="icon-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13C5 8 9 4 18 4c0 9-4 13-9 13H5v-4z"/><path d="M5 19L17 7"/></symbol>
+  <symbol id="icon-wheat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M12 6L9 8l3 2 3-2-3-2z"/><path d="M12 11l-3 2 3 2 3-2-3-2z"/><path d="M12 16l-3 2 3 2 3-2-3-2z"/></symbol>
+  <symbol id="icon-chili" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 9.5c-1 2 0 4.5 2 6.5 2.3 2.3 5.7 3 8 1 2-1.7 2.2-4.6.5-6.8C13 8 9.5 7 7 8c-1 .4-1.8 1-2.5 1.5z"/><path d="M13 7c1-1.6 2.2-2.3 4-2.3"/></symbol>
+  <symbol id="icon-star" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.3 6.1 20.5l1.2-6.5-4.8-4.6 6.6-.9L12 2.5z"/></symbol>
+  <symbol id="icon-quote" viewBox="0 0 24 24" fill="currentColor"><path d="M9.3 7C6.9 7.9 5.5 9.9 5.5 12.5c0 .3 0 .7.1 1H9v5H4v-5.6C4 8.6 6 6 9.3 5v2zm9 0c-2.4.9-3.8 2.9-3.8 5.5 0 .3 0 .7.1 1H18v5h-5v-5.6c0-4.4 2-7 5.3-8v2z"/></symbol>
+  <symbol id="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="icon-facebook" viewBox="0 0 24 24" fill="currentColor"><path d="M14 21v-7h2.5l.5-3H14V9.2c0-.9.3-1.7 1.7-1.7H17V4.7c-.3 0-1.3-.1-2.5-.1-2.6 0-4.3 1.5-4.3 4.4V11H7.5v3H10.2v7H14z"/></symbol>
+  <symbol id="icon-tiktok" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v11.2a3.3 3.3 0 11-3.3-3.3"/><path d="M14 3c.3 2.4 2.1 4.2 4.5 4.4"/></symbol>
+  <symbol id="icon-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.4-7-10.5A7 7 0 0119 10.5C19 15.6 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.5"/></symbol>
+  <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7A2 2 0 0122 16.9z"/></symbol>
+  <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></symbol>
+  <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="icon-chevron-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></symbol>
+  <symbol id="icon-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></symbol>
+  <symbol id="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></symbol>
+  <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  <symbol id="icon-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></symbol>
+  <symbol id="icon-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5.5"/><path d="M8.2 12.8L6.5 21 12 18l5.5 3-1.7-8.2"/></symbol>
+  <symbol id="icon-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 10-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 000-7.8z"/></symbol>
+  <symbol id="icon-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.8 2.6 4.3 5.9 4.3 9.5s-1.5 6.9-4.3 9.5c-2.8-2.6-4.3-5.9-4.3-9.5S9.2 5.1 12 2.5z"/></symbol>
+  <symbol id="icon-table" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="M12 7v5l3.5 2"/></symbol>
+</svg>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="container site-header__inner">
+    <a href="#home" class="logo">
+      <span class="logo__mark"><svg class="icon" aria-hidden="true"><use href="#icon-flame"></use></svg></span>
+      <span class="logo__text">
+        <span class="logo__name">FireStone</span>
+        <span class="logo__tagline">Pizzeria &amp; Cucina Italiana</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="primaryNav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a href="#home" class="nav__link">Home</a></li>
+        <li><a href="#menu" class="nav__link">Menu</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#gallery" class="nav__link">Gallery</a></li>
+        <li><a href="#chef" class="nav__link">Chef</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <a href="#reservation" class="btn btn--primary btn--small">Reserve a Table</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primaryNav">
+        <svg class="icon icon--open" aria-hidden="true"><use href="#icon-menu"></use></svg>
+        <svg class="icon icon--close" aria-hidden="true"><use href="#icon-close"></use></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero__media">
+    <img src="images/hero-cheese-pull.jpg" alt="Hot wood-fired pizza with a stretching cheese pull, fresh from the FireStone oven" class="hero__image">
+    <div class="hero__overlay"></div>
+    <div class="hero__vignette"></div>
+  </div>
+
+  <div class="hero__embers" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <div class="container hero__content">
+    <p class="hero__eyebrow reveal" data-reveal>
+      <span class="eyebrow-line"></span> Forno a Legna &middot; Est. 1987 <span class="eyebrow-line"></span>
+    </p>
+    <h1 class="hero__title">
+      <span class="reveal" data-reveal style="--d:0.05s">Fuoco.</span>
+      <span class="reveal" data-reveal style="--d:0.18s">Farina.</span>
+      <span class="reveal hero__title--accent" data-reveal style="--d:0.31s">Famiglia.</span>
+    </h1>
+    <p class="hero__subtitle reveal" data-reveal style="--d:0.45s">
+      Fire. Flour. Family. An authentic Neapolitan pizzeria where a 900&deg;F wood-fired oven,
+      imported Italian ingredients and three generations of craft meet on every plate.
+    </p>
+    <div class="hero__actions reveal" data-reveal style="--d:0.58s">
+      <a href="#reservation" class="btn btn--primary">Reserve a Table</a>
+      <a href="#menu" class="btn btn--outline btn--light">
+        Explore the Menu
+        <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero__badge reveal" data-reveal style="--d:0.7s">
+    <svg class="icon" aria-hidden="true"><use href="#icon-flame"></use></svg>
+    <div>
+      <strong>900&deg;F</strong>
+      <span>Wood-Fired Oven</span>
+    </div>
+  </div>
+
+  <a href="#story" class="hero__scroll" aria-label="Scroll to explore">
+    <span class="hero__scroll-line"></span>
+    <span class="hero__scroll-text">Scroll</span>
+  </a>
+</section>
+
+<!-- ===== MARQUEE ===== -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>San Marzano Tomatoes</span>
+    <span class="marquee__dot">&#10072;</span>
+    <span>00 Caputo Flour</span>
+    <span class="marquee__dot">&#10072;</span>
+    <span>Fior di Latte Mozzarella</span>
+    <span class="marquee__dot">&#10072;</span>
+    <span>72-Hour Cold Fermentation</span>
+    <span class="marquee__dot">&#10072;</span>
+    <span>Wood-Fired at 900&deg;F</span>
+    <span class="marquee__dot">&#10072;</span>
+    <span>Basilico Genovese</span>
+    <span class="marquee__dot">&#10072;</span>
+    <span>Extra Virgin Olive Oil</span>
+    <span class="marquee__dot">&#10072;</span>
+    <!-- duplicate for seamless loop -->
+    <span>San Marzano Tomatoes</span>
+    <span class="marquee__dot">&#10072;</span>
+    <span>00 Caputo Flour</span>
+    <span class="marquee__dot">&#10072;</span>
+    <span>Fior di Latte Mozzarella</span>
+    <span class="marquee__dot">&#10072;</span>
+    <span>72-Hour Cold Fermentation</span>
+    <span class="marquee__dot">&#10072;</span>
+    <span>Wood-Fired at 900&deg;F</span>
+    <span class="marquee__dot">&#10072;</span>
+    <span>Basilico Genovese</span>
+    <span class="marquee__dot">&#10072;</span>
+    <span>Extra Virgin Olive Oil</span>
+    <span class="marquee__dot">&#10072;</span>
+  </div>
+</div>
+
+<!-- ===== OUR STORY ===== -->
+<section class="story" id="story">
+  <div class="container story__grid">
+    <div class="story__media reveal" data-reveal>
+      <img src="images/wood-oven-flame.jpg" alt="A pizza being slid into FireStone's roaring wood-fired oven" loading="lazy">
+      <div class="story__badge">
+        <span class="story__badge-since">Since</span>
+        <span class="story__badge-year">1987</span>
+      </div>
+    </div>
+    <div class="story__content">
+      <p class="eyebrow reveal" data-reveal>La Nostra Storia</p>
+      <h2 class="section-title reveal" data-reveal>Three Generations,<br>One Oven</h2>
+      <p class="reveal" data-reveal>
+        In 1987, Nonno Salvatore shipped a hand-built brick oven from the hills outside Naples
+        to a quiet corner of Brooklyn Heights. He fired it with chestnut wood, stretched the
+        dough by hand, and served pizza exactly the way his father had taught him &mdash; simple,
+        honest, and full of soul.
+      </p>
+      <p class="reveal" data-reveal>
+        Today, that same oven still burns at the heart of FireStone. Our dough rests for
+        seventy-two hours, our tomatoes come from the volcanic soil of San Marzano, and our
+        mozzarella is made fresh daily. Nothing is rushed. Nothing is shortcut. Every pizza
+        that leaves our oven carries the weight of tradition and the warmth of family.
+      </p>
+      <a href="#chef" class="link-arrow reveal" data-reveal>
+        Meet the family behind the fire
+        <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BEST SELLERS ===== -->
+<section class="bestsellers" id="menu">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow reveal" data-reveal>Le Nostre Specialit&agrave;</p>
+      <h2 class="section-title reveal" data-reveal>Best Sellers</h2>
+      <p class="section-lead reveal" data-reveal>
+        The pies our regulars order before they've even sat down &mdash; each one shaped by hand,
+        dressed with imported ingredients, and blistered in ninety seconds at 900&deg;F.
+      </p>
+    </div>
+
+    <div class="dish-grid">
+      <article class="dish-card dish-card--featured reveal" data-reveal>
+        <div class="dish-card__media">
+          <img src="images/hero-cheese-pull.jpg" alt="Tartufo e Funghi pizza with wild mushrooms, truffle cream and a melted cheese pull" loading="lazy">
+          <span class="dish-card__badge dish-card__badge--gold">Chef's Selection</span>
+        </div>
+        <div class="dish-card__body">
+          <div class="dish-card__head">
+            <h3>Tartufo e Funghi</h3>
+            <span class="dish-card__price">$26</span>
+          </div>
+          <p class="dish-card__it">Wild Mushroom &amp; Truffle Cream</p>
+          <p class="dish-card__desc">
+            Wild forest mushrooms, black truffle cream, fontina, fresh thyme and a whisper
+            of white truffle oil over our slow-fermented base.
+          </p>
+          <ul class="dish-card__tags">
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-leaf"></use></svg> Vegetarian</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-wheat"></use></svg> 72hr Dough</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="dish-card reveal" data-reveal>
+        <div class="dish-card__media">
+          <img src="images/margherita.jpg" alt="Classic Margherita pizza with San Marzano tomato, fior di latte and fresh basil" loading="lazy">
+          <span class="dish-card__badge">Bestseller</span>
+        </div>
+        <div class="dish-card__body">
+          <div class="dish-card__head">
+            <h3>Margherita DOC</h3>
+            <span class="dish-card__price">$19</span>
+          </div>
+          <p class="dish-card__it">Pomodoro, Fior di Latte &amp; Basilico</p>
+          <p class="dish-card__desc">
+            San Marzano DOP tomato, fior di latte mozzarella, fresh basil and a drizzle
+            of extra virgin olive oil. Simplicity, perfected.
+          </p>
+          <ul class="dish-card__tags">
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-leaf"></use></svg> Vegetarian</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="dish-card reveal" data-reveal>
+        <div class="dish-card__media">
+          <img src="images/pepperoni-pull.jpg" alt="Diavola pizza with spicy soppressata and a melted mozzarella pull" loading="lazy">
+          <span class="dish-card__badge dish-card__badge--spice">Spicy</span>
+        </div>
+        <div class="dish-card__body">
+          <div class="dish-card__head">
+            <h3>Diavola</h3>
+            <span class="dish-card__price">$22</span>
+          </div>
+          <p class="dish-card__it">Spicy Soppressata &amp; Chili Honey</p>
+          <p class="dish-card__desc">
+            Spicy soppressata, San Marzano tomato, mozzarella and a finishing drizzle
+            of house-made chili honey for a sweet-heat kick.
+          </p>
+          <ul class="dish-card__tags">
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-chili"></use></svg> Spicy</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="dish-card reveal" data-reveal>
+        <div class="dish-card__media">
+          <img src="images/cheese-pull-2.jpg" alt="Quattro Formaggi pizza with four Italian cheeses and a honey drizzle" loading="lazy">
+          <span class="dish-card__badge">Guest Favorite</span>
+        </div>
+        <div class="dish-card__body">
+          <div class="dish-card__head">
+            <h3>Quattro Formaggi</h3>
+            <span class="dish-card__price">$23</span>
+          </div>
+          <p class="dish-card__it">Four Cheese &amp; Wild Honey</p>
+          <p class="dish-card__desc">
+            Fior di latte, gorgonzola, fontina and aged parmigiano, finished with a
+            drizzle of wild honey and cracked black pepper.
+          </p>
+          <ul class="dish-card__tags">
+            <li><svg class="icon" aria-hidden="true"><use href="#icon-leaf"></use></svg> Vegetarian</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+
+    <div class="bestsellers__cta reveal" data-reveal>
+      <a href="#full-menu" class="btn btn--outline">
+        View Full Menu
+        <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FULL MENU ===== -->
+<section class="full-menu" id="full-menu">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow reveal" data-reveal>Il Nostro Menu</p>
+      <h2 class="section-title reveal" data-reveal>The Full Menu</h2>
+      <p class="section-lead reveal" data-reveal>
+        From antipasti to dolci, every dish is rooted in tradition and built around the
+        finest ingredients we can source from Italy and our local farms.
+      </p>
+    </div>
+
+    <div class="menu-tabs reveal" data-reveal role="tablist" aria-label="Menu categories">
+      <button class="menu-tab is-active" role="tab" aria-selected="true" aria-controls="panel-antipasti" id="tab-antipasti" data-tab="antipasti">Antipasti</button>
+      <button class="menu-tab" role="tab" aria-selected="false" aria-controls="panel-pizze-classiche" id="tab-pizze-classiche" data-tab="pizze-classiche">Pizze Classiche</button>
+      <button class="menu-tab" role="tab" aria-selected="false" aria-controls="panel-pizze-speciali" id="tab-pizze-speciali" data-tab="pizze-speciali">Pizze Speciali</button>
+      <button class="menu-tab" role="tab" aria-selected="false" aria-controls="panel-pasta" id="tab-pasta" data-tab="pasta">Pasta &amp; Risotto</button>
+      <button class="menu-tab" role="tab" aria-selected="false" aria-controls="panel-dolci" id="tab-dolci" data-tab="dolci">Dolci</button>
+      <button class="menu-tab" role="tab" aria-selected="false" aria-controls="panel-bevande" id="tab-bevande" data-tab="bevande">Bevande</button>
+    </div>
+
+    <div class="menu-panels reveal" data-reveal>
+
+      <div class="menu-panel is-active" id="panel-antipasti" role="tabpanel" aria-labelledby="tab-antipasti" data-panel="antipasti">
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Bruschetta al Pomodoro</h4><span class="menu-item__price">$11</span></div>
+            <p class="menu-item__desc">Grilled rustic bread, heirloom tomato, basil, garlic and extra virgin olive oil.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Burrata Pugliese</h4><span class="menu-item__price">$16</span></div>
+            <p class="menu-item__desc">Creamy burrata, roasted cherry tomatoes, basil pesto and grilled crostini.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Arancini di Riso</h4><span class="menu-item__price">$13</span></div>
+            <p class="menu-item__desc">Saffron risotto balls with a molten mozzarella heart, served with marinara.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Carpaccio di Manzo</h4><span class="menu-item__price">$18</span></div>
+            <p class="menu-item__desc">Thin-sliced beef tenderloin, wild arugula, shaved parmigiano and truffle oil.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Calamari Fritti</h4><span class="menu-item__price">$15</span></div>
+            <p class="menu-item__desc">Crisp-fried calamari with lemon aioli and spicy marinara.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Antipasto Misto</h4><span class="menu-item__price">$22</span></div>
+            <p class="menu-item__desc">A board of cured Italian meats, aged cheeses, marinated vegetables and olives.</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu-panel" id="panel-pizze-classiche" role="tabpanel" aria-labelledby="tab-pizze-classiche" data-panel="pizze-classiche" hidden>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Margherita DOC</h4><span class="menu-item__price">$19</span></div>
+            <p class="menu-item__desc">San Marzano tomato, fior di latte mozzarella, fresh basil, extra virgin olive oil.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Marinara</h4><span class="menu-item__price">$16</span></div>
+            <p class="menu-item__desc">San Marzano tomato, garlic, oregano and extra virgin olive oil &mdash; no cheese, all flavor.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Diavola</h4><span class="menu-item__price">$22</span></div>
+            <p class="menu-item__desc">Spicy soppressata, San Marzano tomato, mozzarella and chili honey.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Prosciutto e Funghi</h4><span class="menu-item__price">$23</span></div>
+            <p class="menu-item__desc">Aged ham, cremini mushrooms and fior di latte mozzarella.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Capricciosa</h4><span class="menu-item__price">$24</span></div>
+            <p class="menu-item__desc">Ham, artichoke, mushroom, olives and a soft baked egg.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Quattro Stagioni</h4><span class="menu-item__price">$24</span></div>
+            <p class="menu-item__desc">Artichoke, mushroom, ham and olives &mdash; the four seasons in four quadrants.</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu-panel" id="panel-pizze-speciali" role="tabpanel" aria-labelledby="tab-pizze-speciali" data-panel="pizze-speciali" hidden>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Tartufo e Funghi</h4><span class="menu-item__price">$26</span></div>
+            <p class="menu-item__desc">Wild mushrooms, black truffle cream, fontina and fresh thyme.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Quattro Formaggi</h4><span class="menu-item__price">$23</span></div>
+            <p class="menu-item__desc">Mozzarella, gorgonzola, fontina and parmigiano with a wild honey drizzle.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Salsiccia e Friarielli</h4><span class="menu-item__price">$24</span></div>
+            <p class="menu-item__desc">House-made fennel sausage, broccoli rabe and smoked scamorza.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Burrata e Prosciutto di Parma</h4><span class="menu-item__price">$27</span></div>
+            <p class="menu-item__desc">Fresh burrata, 18-month prosciutto di Parma, arugula and fig glaze.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Nduja Piccante</h4><span class="menu-item__price">$25</span></div>
+            <p class="menu-item__desc">Spicy nduja, stracciatella, wild honey and fresh basil.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Zucca e Gorgonzola</h4><span class="menu-item__price">$24</span></div>
+            <p class="menu-item__desc">Roasted butternut squash, gorgonzola, candied walnuts and sage brown butter.</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu-panel" id="panel-pasta" role="tabpanel" aria-labelledby="tab-pasta" data-panel="pasta" hidden>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Tagliatelle al Tartufo</h4><span class="menu-item__price">$28</span></div>
+            <p class="menu-item__desc">Fresh egg pasta, black truffle cream and aged parmigiano.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Spaghetti alle Vongole</h4><span class="menu-item__price">$26</span></div>
+            <p class="menu-item__desc">Fresh clams, white wine, garlic, chili and parsley.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Risotto ai Funghi Porcini</h4><span class="menu-item__price">$25</span></div>
+            <p class="menu-item__desc">Porcini mushroom risotto, parmigiano and fresh thyme.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Lasagna della Nonna</h4><span class="menu-item__price">$24</span></div>
+            <p class="menu-item__desc">Grandmother's recipe &mdash; slow-braised ragu and creamy bechamel.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Ravioli di Ricotta e Spinaci</h4><span class="menu-item__price">$23</span></div>
+            <p class="menu-item__desc">House-made spinach &amp; ricotta ravioli, sage butter and toasted walnuts.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Penne all'Arrabbiata</h4><span class="menu-item__price">$19</span></div>
+            <p class="menu-item__desc">Spicy tomato sauce, garlic, chili and aged pecorino.</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu-panel" id="panel-dolci" role="tabpanel" aria-labelledby="tab-dolci" data-panel="dolci" hidden>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Tiramis&ugrave; della Casa</h4><span class="menu-item__price">$11</span></div>
+            <p class="menu-item__desc">Espresso-soaked ladyfingers layered with mascarpone cream.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Cannoli Siciliani</h4><span class="menu-item__price">$10</span></div>
+            <p class="menu-item__desc">Crisp shells filled with sweet ricotta, candied orange and pistachio.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Panna Cotta al Caramello</h4><span class="menu-item__price">$10</span></div>
+            <p class="menu-item__desc">Vanilla bean panna cotta with salted caramel.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Affogato</h4><span class="menu-item__price">$9</span></div>
+            <p class="menu-item__desc">Vanilla gelato drowned in hot espresso with amaretti crumble.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Torta Caprese</h4><span class="menu-item__price">$11</span></div>
+            <p class="menu-item__desc">Flourless chocolate &amp; almond cake from the isle of Capri.</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="menu-panel" id="panel-bevande" role="tabpanel" aria-labelledby="tab-bevande" data-panel="bevande" hidden>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Italian Wines</h4><span class="menu-item__price">$12 / $48</span></div>
+            <p class="menu-item__desc">Chianti Classico, Pinot Grigio or Prosecco &mdash; by the glass or bottle.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Aperol Spritz</h4><span class="menu-item__price">$13</span></div>
+            <p class="menu-item__desc">Aperol, prosecco and soda over ice with a fresh orange slice.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Negroni</h4><span class="menu-item__price">$14</span></div>
+            <p class="menu-item__desc">Gin, Campari and sweet vermouth, stirred and served over ice.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Limonata Artigianale</h4><span class="menu-item__price">$6</span></div>
+            <p class="menu-item__desc">House-made lemonade with fresh mint.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>San Pellegrino</h4><span class="menu-item__price">$5</span></div>
+            <p class="menu-item__desc">Sparkling natural mineral water.</p>
+          </li>
+          <li class="menu-item">
+            <div class="menu-item__head"><h4>Espresso / Cappuccino</h4><span class="menu-item__price">$4 / $5</span></div>
+            <p class="menu-item__desc">Slow-roasted Italian beans, pulled to order.</p>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY CHOOSE US ===== -->
+<section class="why-us" id="about">
+  <div class="container">
+    <div class="section-head section-head--light">
+      <p class="eyebrow reveal" data-reveal>Perch&eacute; FireStone</p>
+      <h2 class="section-title reveal" data-reveal>Why Choose Us</h2>
+      <p class="section-lead reveal" data-reveal>
+        Every detail, from the bricks in our oven to the flour in our dough, is chosen
+        to honor a single idea: pizza the way it was meant to be.
+      </p>
+    </div>
+
+    <div class="why-us__grid">
+      <div class="why-us__media reveal" data-reveal>
+        <img src="images/interior-warm.jpg" alt="The warm, brick-lined dining room at FireStone with its wood-fired oven glowing in the background" loading="lazy" class="why-us__img why-us__img--main">
+        <img src="images/chef-at-work.jpg" alt="A pizzaiolo dressing a fresh pizza at the marble prep counter" loading="lazy" class="why-us__img why-us__img--accent">
+      </div>
+
+      <div class="why-us__features">
+        <div class="feature reveal" data-reveal>
+          <span class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#icon-flame"></use></svg></span>
+          <div>
+            <h3>900&deg;F Wood-Fired Oven</h3>
+            <p>Our handcrafted dome oven, imported from Naples, bakes every pizza in
+            ninety seconds &mdash; sealing in flavor with a perfectly charred, leopard-spotted crust.</p>
+          </div>
+        </div>
+        <div class="feature reveal" data-reveal>
+          <span class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#icon-clock"></use></svg></span>
+          <div>
+            <h3>72-Hour Slow Fermentation</h3>
+            <p>Our dough rests for three full days before it ever touches the oven, developing
+            the deep flavor and airy, digestible crumb of true Neapolitan pizza.</p>
+          </div>
+        </div>
+        <div class="feature reveal" data-reveal>
+          <span class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#icon-globe"></use></svg></span>
+          <div>
+            <h3>Imported Italian Ingredients</h3>
+            <p>San Marzano DOP tomatoes, Caputo 00 flour, fior di latte mozzarella and
+            extra virgin olive oil from Puglia &mdash; from the regions that perfected them.</p>
+          </div>
+        </div>
+        <div class="feature reveal" data-reveal>
+          <span class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#icon-heart"></use></svg></span>
+          <div>
+            <h3>Family Recipes Since 1987</h3>
+            <p>Every recipe has been passed down through three generations, refined by hand,
+            and served with the same pride as the very first pizza out of our oven.</p>
+          </div>
+        </div>
+        <div class="feature reveal" data-reveal>
+          <span class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#icon-wheat"></use></svg></span>
+          <div>
+            <h3>Made Fresh, Every Day</h3>
+            <p>No freezers, no shortcuts. Our dough is hand-mixed each morning, our sauces
+            simmer slowly, and our mozzarella is pulled fresh daily.</p>
+          </div>
+        </div>
+        <div class="feature reveal" data-reveal>
+          <span class="feature__icon"><svg class="icon" aria-hidden="true"><use href="#icon-award"></use></svg></span>
+          <div>
+            <h3>Award-Winning Craft</h3>
+            <p>Named "Best Neapolitan Pizza in the City" three years running, our pizzaioli
+            train for years to master the art of the perfect pie.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-bar reveal" data-reveal>
+      <div class="stat">
+        <span class="stat__number" data-count="37">0</span>
+        <span class="stat__label">Years of Tradition</span>
+      </div>
+      <div class="stat">
+        <span class="stat__number" data-count="900" data-suffix="&deg;F">0</span>
+        <span class="stat__label">Oven Temperature</span>
+      </div>
+      <div class="stat">
+        <span class="stat__number" data-count="72" data-suffix="h">0</span>
+        <span class="stat__label">Dough Fermentation</span>
+      </div>
+      <div class="stat">
+        <span class="stat__number" data-count="100" data-suffix="%">0</span>
+        <span class="stat__label">Italian-Imported</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section class="gallery" id="gallery">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow reveal" data-reveal><span class="eyebrow-line"></span> La Galleria <span class="eyebrow-line"></span></p>
+      <h2 class="section-title reveal" data-reveal>A Glimpse Inside FireStone</h2>
+      <p class="section-lead reveal" data-reveal>
+        Three details, carefully chosen &mdash; the fire that finishes every pizza, the
+        room that holds every gathering, and the hands behind four decades of craft.
+      </p>
+    </div>
+
+    <div class="gallery__showcase">
+      <figure class="gallery__feature reveal" data-reveal>
+        <img src="images/cheese-pull-2.jpg" alt="A wood-fired pizza with a melted cheese pull, fresh from the FireStone oven" loading="lazy">
+        <figcaption>
+          <span class="gallery__caption-label">01 &mdash; Signature Pizza</span>
+          <span class="gallery__caption-title">Straight From the Flame</span>
+        </figcaption>
+      </figure>
+
+      <figure class="gallery__item gallery__item--interior reveal" data-reveal style="--d:0.12s">
+        <img src="images/interior-warm.jpg" alt="The warm, brick-vaulted dining room at FireStone, lit by the glow of the wood-fired oven" loading="lazy">
+        <figcaption>
+          <span class="gallery__caption-label">02 &mdash; Restaurant Interior</span>
+          <span class="gallery__caption-title">A Room Built for Lingering</span>
+        </figcaption>
+      </figure>
+
+      <figure class="gallery__item gallery__item--chef reveal" data-reveal style="--d:0.24s">
+        <img src="images/chef-portrait.jpg" alt="Chef Antonio Bellini smiling beside the wood-fired oven, holding a freshly baked pizza" loading="lazy">
+        <figcaption>
+          <span class="gallery__caption-label">03 &mdash; Master Chef</span>
+          <span class="gallery__caption-title">Four Decades of Craft</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MEET OUR CHEF ===== -->
+<section class="chef" id="chef">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow reveal" data-reveal>Il Nostro Chef</p>
+      <h2 class="section-title reveal" data-reveal>Meet Our Chef</h2>
+    </div>
+
+    <div class="chef__profile">
+      <div class="chef__media reveal" data-reveal>
+        <img src="images/chef-portrait.jpg" alt="Chef Antonio Bellini smiling while holding a freshly baked pizza beside the wood-fired oven">
+        <div class="chef__quote">
+          <svg class="icon" aria-hidden="true"><use href="#icon-quote"></use></svg>
+          <p>Pizza is not fast food. It's slow food, made fast.</p>
+        </div>
+      </div>
+      <div class="chef__content reveal" data-reveal>
+        <p class="chef__role">Executive Chef &amp; Founder</p>
+        <h3 class="chef__name">Antonio Bellini</h3>
+        <p>
+          Antonio learned to stretch dough standing on a wooden crate beside his
+          grandmother's oven in Naples. At nineteen, he apprenticed in pizzerias across
+          Campania before bringing the family recipes &mdash; and the family oven &mdash; to
+          Brooklyn Heights in 1987.
+        </p>
+        <p>
+          Nearly four decades later, Antonio still arrives before sunrise to mix the
+          morning's dough by hand. "A good pizza," he says, "needs patience more than
+          ingredients. Everything else follows."
+        </p>
+        <p class="chef__signature">Antonio Bellini</p>
+      </div>
+    </div>
+
+    <div class="chef__team">
+      <div class="team-card reveal" data-reveal>
+        <div class="team-card__media">
+          <img src="images/chef-young.jpg" alt="Junior pizzaiolo Marco Bellini holding a freshly baked pizza" loading="lazy">
+        </div>
+        <h4>Marco Bellini</h4>
+        <p>Head Pizzaiolo &mdash; Third generation, trained in Naples</p>
+      </div>
+      <div class="team-card reveal" data-reveal>
+        <div class="team-card__media">
+          <img src="images/chef-at-work.jpg" alt="Sous chef preparing fresh ingredients at the kitchen counter" loading="lazy">
+        </div>
+        <h4>Luca Romano</h4>
+        <p>Sous Chef &mdash; Pasta &amp; Antipasti specialist</p>
+      </div>
+      <div class="team-card reveal" data-reveal>
+        <div class="team-card__media">
+          <img src="images/wood-oven-flame.jpg" alt="The hand-built wood-fired oven imported from Naples" loading="lazy">
+        </div>
+        <h4>The Oven</h4>
+        <p>Hand-built in Naples &mdash; burning chestnut wood since 1987</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROMOTIONS ===== -->
+<section class="promotions" id="promotions">
+  <div class="container">
+    <div class="section-head section-head--light">
+      <p class="eyebrow reveal" data-reveal>Le Nostre Promozioni</p>
+      <h2 class="section-title reveal" data-reveal>Promotions &amp; Events</h2>
+      <p class="section-lead reveal" data-reveal>
+        A few reasons to come back &mdash; and to bring the whole table.
+      </p>
+    </div>
+
+    <div class="promo-grid">
+      <article class="promo-card reveal" data-reveal>
+        <span class="promo-card__tag">SUN</span>
+        <h3>Famiglia Sunday</h3>
+        <p>Long tables, shared plates, and kids eat free. Our Sunday feast is family-style
+        dining the way it's meant to be &mdash; pizza, pasta and dolci passed around the table.</p>
+        <span class="promo-card__time"><svg class="icon" aria-hidden="true"><use href="#icon-clock"></use></svg> 12:00 PM &ndash; 4:00 PM</span>
+      </article>
+
+      <article class="promo-card promo-card--accent reveal" data-reveal>
+        <span class="promo-card__tag">MON&ndash;FRI</span>
+        <h3>Aperitivo Hour</h3>
+        <p>Half-price antipasti and house wine by the glass. Stop by after work for a
+        taste of la dolce vita before dinner service begins.</p>
+        <span class="promo-card__time"><svg class="icon" aria-hidden="true"><use href="#icon-clock"></use></svg> 4:00 PM &ndash; 6:00 PM</span>
+      </article>
+
+      <article class="promo-card reveal" data-reveal>
+        <span class="promo-card__tag">WED</span>
+        <h3>Wine Pairing Wednesdays</h3>
+        <p>A five-course tasting menu paired with boutique Italian wines, guided by our
+        sommelier. An evening of stories, sips and small plates.</p>
+        <span class="promo-card__time"><svg class="icon" aria-hidden="true"><use href="#icon-clock"></use></svg> By Reservation &middot; $75 / person</span>
+      </article>
+
+      <article class="promo-card promo-card--accent reveal" data-reveal>
+        <span class="promo-card__tag">ALL WEEK</span>
+        <h3>Date Night Duo</h3>
+        <p>Two signature pizzas, a bottle of Chianti and tiramis&ugrave; for two. Romance,
+        Italian-style &mdash; every evening of the week.</p>
+        <span class="promo-card__time"><svg class="icon" aria-hidden="true"><use href="#icon-clock"></use></svg> $59 for Two</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESERVATION ===== -->
+<section class="reservation" id="reservation">
+  <div class="reservation__media">
+    <img src="images/terrace-dining.jpg" alt="Candlelit terrace dining at FireStone in the evening" loading="lazy">
+    <div class="reservation__overlay"></div>
+  </div>
+
+  <div class="container reservation__wrap">
+    <div class="reservation__info reveal" data-reveal>
+      <p class="eyebrow">Prenota un Tavolo</p>
+      <h2 class="section-title">Reserve Your Table</h2>
+      <p>
+        Whether it's a quiet dinner for two or a long Sunday lunch with the whole
+        family, we'd love to host you. Reservations are recommended for parties of
+        five or more and for weekend evenings.
+      </p>
+      <ul class="reservation__details">
+        <li>
+          <svg class="icon" aria-hidden="true"><use href="#icon-pin"></use></svg>
+          <span>118 Riverside Lane, Brooklyn Heights, NY 11201</span>
+        </li>
+        <li>
+          <svg class="icon" aria-hidden="true"><use href="#icon-clock"></use></svg>
+          <span>Tue&ndash;Thu 5&ndash;10pm &middot; Fri&ndash;Sat 12&ndash;11pm &middot; Sun 12&ndash;9pm &middot; Mon Closed</span>
+        </li>
+        <li>
+          <svg class="icon" aria-hidden="true"><use href="#icon-phone"></use></svg>
+          <span>+1 (212) 555-0148</span>
+        </li>
+      </ul>
+    </div>
+
+    <form class="reservation__form reveal" data-reveal id="reservationForm" novalidate>
+      <h3 class="reservation__form-title">
+        <svg class="icon" aria-hidden="true"><use href="#icon-table"></use></svg>
+        Request a Reservation
+      </h3>
+
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="resName">Full Name</label>
+          <input type="text" id="resName" name="name" required autocomplete="name" placeholder="Your name">
+        </div>
+        <div class="form-field">
+          <label for="resEmail">Email</label>
+          <input type="email" id="resEmail" name="email" required autocomplete="email" placeholder="you@example.com">
+        </div>
+        <div class="form-field">
+          <label for="resPhone">Phone</label>
+          <input type="tel" id="resPhone" name="phone" required autocomplete="tel" placeholder="+1 (212) 555-0100">
+        </div>
+        <div class="form-field">
+          <label for="resGuests">Guests</label>
+          <select id="resGuests" name="guests" required>
+            <option value="">Select</option>
+            <option>1 Guest</option>
+            <option>2 Guests</option>
+            <option>3 Guests</option>
+            <option>4 Guests</option>
+            <option>5 Guests</option>
+            <option>6 Guests</option>
+            <option>7+ Guests (call us)</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="resDate">Date</label>
+          <input type="date" id="resDate" name="date" required>
+        </div>
+        <div class="form-field">
+          <label for="resTime">Time</label>
+          <select id="resTime" name="time" required>
+            <option value="">Select</option>
+            <option>5:00 PM</option>
+            <option>5:30 PM</option>
+            <option>6:00 PM</option>
+            <option>6:30 PM</option>
+            <option>7:00 PM</option>
+            <option>7:30 PM</option>
+            <option>8:00 PM</option>
+            <option>8:30 PM</option>
+            <option>9:00 PM</option>
+          </select>
+        </div>
+        <div class="form-field form-field--wide">
+          <label for="resOccasion">Occasion <span class="form-field__optional">(optional)</span></label>
+          <select id="resOccasion" name="occasion">
+            <option value="">No special occasion</option>
+            <option>Birthday</option>
+            <option>Anniversary</option>
+            <option>Business Dinner</option>
+            <option>Date Night</option>
+            <option>Family Gathering</option>
+          </select>
+        </div>
+        <div class="form-field form-field--wide">
+          <label for="resMessage">Special Requests <span class="form-field__optional">(optional)</span></label>
+          <textarea id="resMessage" name="message" rows="3" placeholder="Allergies, seating preferences, celebrations..."></textarea>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn--primary btn--full">
+        Request Reservation
+        <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+      </button>
+
+      <p class="reservation__note">We'll confirm your table by email or phone within a few hours.</p>
+
+      <div class="form-success" id="formSuccess" hidden role="status">
+        <svg class="icon" aria-hidden="true"><use href="#icon-flame"></use></svg>
+        <div>
+          <h4>Grazie! Your request is on its way.</h4>
+          <p>Our host stand will reach out shortly to confirm your reservation. We can't wait to welcome you.</p>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow reveal" data-reveal>Cosa Dicono i Nostri Ospiti</p>
+      <h2 class="section-title reveal" data-reveal>Loved by Our Guests</h2>
+    </div>
+
+    <div class="testimonial-slider reveal" data-reveal>
+      <div class="testimonial-track" id="testimonialTrack">
+        <article class="testimonial-card">
+          <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+          </div>
+          <p class="testimonial-card__quote">
+            "This is the closest I've found to my grandmother's pizza in Naples.
+            The crust, the char, the simplicity &mdash; FireStone gets it exactly right."
+          </p>
+          <div class="testimonial-card__author">
+            <span class="testimonial-card__avatar">SM</span>
+            <div>
+              <strong>Sofia Marchetti</strong>
+              <span>Brooklyn, NY</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+          </div>
+          <p class="testimonial-card__quote">
+            "The wood-fired aroma hits you the second you walk in. We ordered the
+            Tartufo e Funghi and it might be the best pizza I've ever had."
+          </p>
+          <div class="testimonial-card__author">
+            <span class="testimonial-card__avatar">JW</span>
+            <div>
+              <strong>James Whitfield</strong>
+              <span>Local Guide</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+          </div>
+          <p class="testimonial-card__quote">
+            "We celebrated our tenth anniversary here and the staff made it
+            unforgettable. The truffle pizza and tiramis&ugrave; were perfection."
+          </p>
+          <div class="testimonial-card__author">
+            <span class="testimonial-card__avatar">ER</span>
+            <div>
+              <strong>Elena &amp; Marco Rossi</strong>
+              <span>Anniversary Dinner</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+          </div>
+          <p class="testimonial-card__quote">
+            "Authentic, warm and full of character &mdash; it genuinely feels like
+            dining in a small trattoria in Naples. Highly recommend the Diavola."
+          </p>
+          <div class="testimonial-card__author">
+            <span class="testimonial-card__avatar">PK</span>
+            <div>
+              <strong>Priya Kapoor</strong>
+              <span>Food Blogger</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+          </div>
+          <p class="testimonial-card__quote">
+            "I've been coming every Sunday for two years. The Famiglia feast is the
+            highlight of my week &mdash; consistent, delicious, and the staff feels like family."
+          </p>
+          <div class="testimonial-card__author">
+            <span class="testimonial-card__avatar">DC</span>
+            <div>
+              <strong>David Chen</strong>
+              <span>Weekly Regular</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+            <svg class="icon" aria-hidden="true"><use href="#icon-star"></use></svg>
+          </div>
+          <p class="testimonial-card__quote">
+            "From the moment we sat down, everything felt special. The 72-hour
+            dough makes such a difference &mdash; light, airy, unforgettable."
+          </p>
+          <div class="testimonial-card__author">
+            <span class="testimonial-card__avatar">MG</span>
+            <div>
+              <strong>Maria Gonzalez</strong>
+              <span>First-Time Visitor</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="testimonial-controls">
+        <button class="testimonial-arrow" id="testimonialPrev" aria-label="Previous testimonial">
+          <svg class="icon" aria-hidden="true"><use href="#icon-chevron-left"></use></svg>
+        </button>
+        <div class="testimonial-dots" id="testimonialDots"></div>
+        <button class="testimonial-arrow" id="testimonialNext" aria-label="Next testimonial">
+          <svg class="icon" aria-hidden="true"><use href="#icon-chevron-right"></use></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq" id="faq">
+  <div class="container faq__wrap">
+    <div class="section-head section-head--start">
+      <p class="eyebrow reveal" data-reveal>Domande Frequenti</p>
+      <h2 class="section-title reveal" data-reveal>Frequently Asked Questions</h2>
+      <p class="section-lead reveal" data-reveal>
+        Can't find what you're looking for? Reach out &mdash; we're happy to help.
+      </p>
+    </div>
+
+    <div class="faq__list reveal" data-reveal>
+      <div class="faq__item is-open">
+        <button class="faq__question" aria-expanded="true">
+          Do I need a reservation?
+          <svg class="icon faq__icon" aria-hidden="true"><use href="#icon-plus"></use></svg>
+        </button>
+        <div class="faq__answer">
+          <p>We recommend reserving, especially for dinner service and weekends.
+          Walk-ins are always welcome and seated based on availability.</p>
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          Do you offer gluten-free or vegan options?
+          <svg class="icon faq__icon" aria-hidden="true"><use href="#icon-plus"></use></svg>
+        </button>
+        <div class="faq__answer">
+          <p>Yes. We offer a gluten-free dough made fresh in a dedicated prep area,
+          plus plant-based mozzarella and a selection of vegan antipasti and dolci.</p>
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          Is parking available near the restaurant?
+          <svg class="icon faq__icon" aria-hidden="true"><use href="#icon-plus"></use></svg>
+        </button>
+        <div class="faq__answer">
+          <p>Complimentary valet parking is available Friday and Saturday evenings.
+          Otherwise, the Riverside Garage on Corso Street is a two-minute walk.</p>
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          Can FireStone host private events or large groups?
+          <svg class="icon faq__icon" aria-hidden="true"><use href="#icon-plus"></use></svg>
+        </button>
+        <div class="faq__answer">
+          <p>Absolutely. Our private dining room seats up to thirty guests and includes
+          a customizable family-style menu &mdash; perfect for celebrations, rehearsal
+          dinners and corporate gatherings.</p>
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          Do you offer takeout or delivery?
+          <svg class="icon faq__icon" aria-hidden="true"><use href="#icon-plus"></use></svg>
+        </button>
+        <div class="faq__answer">
+          <p>Takeout is available for our full menu. Delivery is offered within a
+          three-mile radius through our partner delivery services.</p>
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          Is there a dress code?
+          <svg class="icon faq__icon" aria-hidden="true"><use href="#icon-plus"></use></svg>
+        </button>
+        <div class="faq__answer">
+          <p>We keep it smart casual. Come as you are &mdash; just leave the flip-flops
+          at home for dinner service.</p>
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          Are children welcome?
+          <svg class="icon faq__icon" aria-hidden="true"><use href="#icon-plus"></use></svg>
+        </button>
+        <div class="faq__answer">
+          <p>Of course! We offer a dedicated kids' menu, crayons and high chairs.
+          Sunday Famiglia feasts are especially popular with families.</p>
+        </div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          Where do your ingredients come from?
+          <svg class="icon faq__icon" aria-hidden="true"><use href="#icon-plus"></use></svg>
+        </button>
+        <div class="faq__answer">
+          <p>Our key ingredients &mdash; San Marzano tomatoes, 00 flour, fior di latte
+          and olive oil &mdash; are imported directly from Campania and Puglia. Produce
+          and herbs come from local farms within fifty miles.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+  <div class="container contact__grid">
+    <div class="contact__info reveal" data-reveal>
+      <p class="eyebrow">Vieni a Trovarci</p>
+      <h2 class="section-title">Visit Us</h2>
+      <p class="section-lead">
+        Tucked into a quiet corner of Brooklyn Heights, FireStone has been welcoming
+        neighbors and travelers alike since 1987.
+      </p>
+
+      <ul class="contact__list">
+        <li>
+          <svg class="icon" aria-hidden="true"><use href="#icon-pin"></use></svg>
+          <div>
+            <strong>Address</strong>
+            <span>118 Riverside Lane, Brooklyn Heights, NY 11201</span>
+          </div>
+        </li>
+        <li>
+          <svg class="icon" aria-hidden="true"><use href="#icon-phone"></use></svg>
+          <div>
+            <strong>Phone</strong>
+            <span>+1 (212) 555-0148</span>
+          </div>
+        </li>
+        <li>
+          <svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg>
+          <div>
+            <strong>Email</strong>
+            <span>ciao@firestonepizza.com</span>
+          </div>
+        </li>
+        <li>
+          <svg class="icon" aria-hidden="true"><use href="#icon-clock"></use></svg>
+          <div>
+            <strong>Hours</strong>
+            <span>
+              Mon &mdash; Closed<br>
+              Tue&ndash;Thu &mdash; 5:00 PM &ndash; 10:00 PM<br>
+              Fri&ndash;Sat &mdash; 12:00 PM &ndash; 11:00 PM<br>
+              Sun &mdash; 12:00 PM &ndash; 9:00 PM
+            </span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="social-links">
+        <a href="#" aria-label="FireStone on Instagram"><svg class="icon" aria-hidden="true"><use href="#icon-instagram"></use></svg></a>
+        <a href="#" aria-label="FireStone on Facebook"><svg class="icon" aria-hidden="true"><use href="#icon-facebook"></use></svg></a>
+        <a href="#" aria-label="FireStone on TikTok"><svg class="icon" aria-hidden="true"><use href="#icon-tiktok"></use></svg></a>
+      </div>
+    </div>
+
+    <div class="contact__map reveal" data-reveal aria-hidden="true">
+      <div class="contact__map-graphic">
+        <div class="map-grid"></div>
+        <div class="map-road map-road--h"></div>
+        <div class="map-road map-road--v"></div>
+        <div class="map-pin">
+          <svg class="icon" aria-hidden="true"><use href="#icon-pin"></use></svg>
+        </div>
+        <span class="map-label">Riverside Lane</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a href="#home" class="logo logo--footer">
+        <span class="logo__mark"><svg class="icon" aria-hidden="true"><use href="#icon-flame"></use></svg></span>
+        <span class="logo__text">
+          <span class="logo__name">FireStone</span>
+          <span class="logo__tagline">Pizzeria &amp; Cucina Italiana</span>
+        </span>
+      </a>
+      <p>Wood-fired pizza, handmade pasta and Italian hospitality &mdash; crafted with
+      fire, flour and family since 1987.</p>
+      <div class="social-links">
+        <a href="#" aria-label="FireStone on Instagram"><svg class="icon" aria-hidden="true"><use href="#icon-instagram"></use></svg></a>
+        <a href="#" aria-label="FireStone on Facebook"><svg class="icon" aria-hidden="true"><use href="#icon-facebook"></use></svg></a>
+        <a href="#" aria-label="FireStone on TikTok"><svg class="icon" aria-hidden="true"><use href="#icon-tiktok"></use></svg></a>
+      </div>
+    </div>
+
+    <nav class="footer__nav" aria-label="Explore">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Best Sellers</a></li>
+        <li><a href="#full-menu">Full Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#chef">Meet Our Chef</a></li>
+      </ul>
+    </nav>
+
+    <nav class="footer__nav" aria-label="Restaurant">
+      <h4>Restaurant</h4>
+      <ul>
+        <li><a href="#about">Why FireStone</a></li>
+        <li><a href="#promotions">Promotions</a></li>
+        <li><a href="#reservation">Reservations</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer__newsletter">
+      <h4>Stay in the Loop</h4>
+      <p>New menu items, events and the occasional free dolci. No spam &mdash; promesso.</p>
+      <form id="newsletterForm" class="newsletter-form">
+        <label for="newsletterEmail" class="sr-only">Email address</label>
+        <input type="email" id="newsletterEmail" name="email" placeholder="Your email address" required>
+        <button type="submit" aria-label="Subscribe">
+          <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+        </button>
+      </form>
+      <p class="newsletter-success" id="newsletterSuccess" hidden>Grazie &mdash; you're on the list!</p>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <p>&copy; <span id="currentYear"></span> FireStone Pizza. All rights reserved.</p>
+      <p>Crafted with fire, flour &amp; family.</p>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg class="icon" aria-hidden="true"><use href="#icon-arrow-right"></use></svg>
+</button>
+
+<script src="js/script.js"></script>
+</body>
+</html>

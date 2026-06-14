@@ -244,9 +244,11 @@
 
   /* ---------------------------------------------------------------------
      Reservation form
+     Integration contract: see RESERVATION_INTEGRATION.md
   ----------------------------------------------------------------------- */
   const reservationForm = document.getElementById('reservationForm');
   const formSuccess = document.getElementById('formSuccess');
+  const formError = document.getElementById('formError');
   const resDate = document.getElementById('resDate');
 
   if (resDate) {
@@ -257,7 +259,43 @@
     resDate.setAttribute('min', `${yyyy}-${mm}-${dd}`);
   }
 
-  reservationForm?.addEventListener('submit', (e) => {
+  // Reservation API endpoint. Update this once the reservation system
+  // repo/contract is available — see RESERVATION_INTEGRATION.md.
+  const RESERVATION_API_ENDPOINT = '/api/reservations';
+
+  // "5:00 PM" (form label) -> "17:00" (24h, sent to the API).
+  const RESERVATION_TIME_LABEL_TO_24H = {
+    '5:00 PM': '17:00',
+    '5:30 PM': '17:30',
+    '6:00 PM': '18:00',
+    '6:30 PM': '18:30',
+    '7:00 PM': '19:00',
+    '7:30 PM': '19:30',
+    '8:00 PM': '20:00',
+    '8:30 PM': '20:30',
+    '9:00 PM': '21:00',
+  };
+
+  const buildReservationPayload = (form) => {
+    const data = new FormData(form);
+    const guestsLabel = (data.get('guests') || '').trim();
+    const timeLabel = (data.get('time') || '').trim();
+
+    return {
+      name: (data.get('name') || '').trim(),
+      email: (data.get('email') || '').trim(),
+      phone: (data.get('phone') || '').trim(),
+      date: data.get('date') || '',
+      time: RESERVATION_TIME_LABEL_TO_24H[timeLabel] || timeLabel,
+      partySize: parseInt(guestsLabel, 10) || null,
+      partySizeLabel: guestsLabel,
+      occasion: data.get('occasion') || null,
+      specialRequests: (data.get('message') || '').trim() || null,
+      source: 'website',
+    };
+  };
+
+  reservationForm?.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     if (!reservationForm.checkValidity()) {
@@ -265,17 +303,46 @@
       return;
     }
 
-    reservationForm.hidden = true;
-    if (formSuccess) {
-      formSuccess.hidden = false;
-      formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    const submitBtn = reservationForm.querySelector('button[type="submit"]');
+    const submitLabel = submitBtn?.innerHTML;
+
+    if (formError) formError.hidden = true;
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
     }
 
-    setTimeout(() => {
-      reservationForm.reset();
-      reservationForm.hidden = false;
-      if (formSuccess) formSuccess.hidden = true;
-    }, 6000);
+    try {
+      const response = await fetch(RESERVATION_API_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(buildReservationPayload(reservationForm)),
+      });
+
+      if (!response.ok) throw new Error(`Reservation request failed: ${response.status}`);
+
+      reservationForm.hidden = true;
+      if (formSuccess) {
+        formSuccess.hidden = false;
+        formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+
+      setTimeout(() => {
+        reservationForm.reset();
+        reservationForm.hidden = false;
+        if (formSuccess) formSuccess.hidden = true;
+      }, 6000);
+    } catch (err) {
+      if (formError) {
+        formError.hidden = false;
+        formError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = submitLabel;
+      }
+    }
   });
 
   /* ---------------------------------------------------------------------
